@@ -1,0 +1,13 @@
+########## Parameters #########
+
+#command line : python3 -W ignore microphona.py parameters_toy.txt 
+
+groups:toy/NW
+suffix:test
+gml:1
+graph:1
+oriented:0
+human:0
+threshold:0.5
+bacteria:781,801,815
+metabolites:C00078 #tryptophan

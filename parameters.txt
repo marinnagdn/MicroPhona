@@ -1,0 +1,10 @@
+########## Parameters #########
+groups:
+suffix:
+gml:1
+graph:1
+oriented:0
+human:0
+threshold:0
+#bacteria:
+#metabolites:
