@@ -6,6 +6,7 @@ AUTHORS:
 - Aimeric Dabin
 - Marinna Gaudin
 - Jolann Pommellec
+
 University of Nantes, France
 Master 2 Bioinformatics
 
@@ -20,30 +21,35 @@ D. Machado, S. Andrejev, M. Tramontano, et K. R. Patil, « Fast automated recons
 « Recon3D enables a three-dimensional view of gene variation in human metabolism | Nature Biotechnology ». [En ligne]. Disponible sur: https://www.nature.com/articles/nbt.4072. 
 
 ### INPUTS ###
-- .gml files generated with a tool such as FlashWeave
+
+- .gml files generated with a tool such as FlashWeave (see below for more informations)
 
 	*** We consider the nodes writing with the phylogenetic way
 	Ex:	Root;k__Bacteria;p__Actinobacteria;c__Actinobacteria;o__Bifidobacteriales;f__Bifidobacteriaceae;g__Bifidobacterium;s__animali
 
 	/!\ KEEP ONLY THE BACTERIA THAT HAVE THEIR GENUS AND SPECIES. ONLY GENUS WILL BREAK THE PROGRAM.
 	
-- parameters file
+- Parameters file :
 	
-	# 1 for YES, 0 for NO
+		* 1 for YES, 0 for NO
 	
-	groups : prefix of your gml files
-	suffix : suffix of your outputs files
-	gml : new gml annotated files ?
-	graph : graph png files ?
-	oriented : oriented graphs ? 
+		groups : prefix of your gml files
 	
-	# oriented:1 -> ONLY IRREVERSIBLE REACTIONS
-	# oriented:0 -> Resersible + Irreversible Reactions
+		suffix : suffix of your outputs files
 	
-	human : human as a node ?
-	threshold : minimum threshold for absolute correlations
-	[ bacteria : number of the bacteria you want to highlight. see index_bacteria.txt to find the corresponding of your bacteria of interest ]
-	[ metabolites : KEGG ID of your metabolites of interest. Go on KEGG Databse to get them. ]
+		gml : new gml annotated files ?
+	
+		graph : graph png files ?
+	
+		oriented : oriented graphs ? 
+	
+		* oriented:1 -> ONLY IRREVERSIBLE REACTIONS
+		* oriented:0 -> Resersible + Irreversible Reactions
+	
+		human : human as a node ?
+		threshold : minimum threshold for absolute correlations
+		<optional> bacteria : number of the bacteria you want to highlight. see index_bacteria.txt to find the corresponding of your bacteria of interest ]
+		<optional >metabolites : KEGG ID of your metabolites of interest. Go on KEGG Databse to get them. ]
 
 ### OUTPUTS ###
 
@@ -53,7 +59,8 @@ D. Machado, S. Andrejev, M. Tramontano, et K. R. Patil, « Fast automated recons
 
 ### EXAMPLE OF USE ###
 
-command line : python3 -W ignore microphona.py parameters.txt
+command line : 
+		python3 -W ignore microphona.py parameters.txt
 
 ---> See toy_example directory to see the results
 
@@ -66,12 +73,13 @@ Get DATA (MgniFy Database) :
 https://www.ebi.ac.uk/metagenomics/studies/MGYS00001279
 -> where we downloaded the tsv files
 
-See tsv_files directory to see the origin abundance tables
+--> See tsv_files directory to see the origin abundance tables
 
 ### GET GML FROM TSV ###
 
-	*** FlashWeave : https://github.com/meringlab/FlashWeave.jl/blob/master/README.md
-	J. Tackmann, J. F. Matias Rodrigues, et C. von Mering, « Rapid Inference of Direct Interactions in Large-Scale Ecological Networks from Heterogeneous Microbial Sequencing Data », Cell Syst, vol. 9, n o 3, p. 286-296.e8, sept. 2019
+*** FlashWeave : https://github.com/meringlab/FlashWeave.jl/blob/master/README.md
+
+J. Tackmann, J. F. Matias Rodrigues, et C. von Mering, « Rapid Inference of Direct Interactions in Large-Scale Ecological Networks from Heterogeneous Microbial Sequencing Data », Cell Syst, vol. 9, n o 3, p. 286-296.e8, sept. 2019
 	
 	1) Install Julia
 	2) Install FlashWeave
