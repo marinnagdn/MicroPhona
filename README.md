@@ -1,6 +1,4 @@
-####################
-#### MicroPhona ###
-####################
+# MicroPhona
 
 AUTHORS:
 - Aimeric Dabin
@@ -31,7 +29,7 @@ D. Machado, S. Andrejev, M. Tramontano, et K. R. Patil, « Fast automated recons
 	
 - Parameters file :
 	
-		* 1 for YES, 0 for NO
+		# 1 for YES, 0 for NO
 	
 		groups : prefix of your gml files
 	
@@ -43,13 +41,13 @@ D. Machado, S. Andrejev, M. Tramontano, et K. R. Patil, « Fast automated recons
 	
 		oriented : oriented graphs ? 
 	
-		* oriented:1 -> ONLY IRREVERSIBLE REACTIONS
-		* oriented:0 -> Resersible + Irreversible Reactions
+		# oriented:1 -> ONLY IRREVERSIBLE REACTIONS
+		# oriented:0 -> Resersible + Irreversible Reactions
 	
 		human : human as a node ?
 		threshold : minimum threshold for absolute correlations
 		<optional> bacteria : number of the bacteria you want to highlight. see index_bacteria.txt to find the corresponding of your bacteria of interest ]
-		<optional >metabolites : KEGG ID of your metabolites of interest. Go on KEGG Databse to get them. ]
+		<optional> metabolites : KEGG ID of your metabolites of interest. Go on KEGG Databse to get them. ]
 
 ### OUTPUTS ###
 
@@ -60,6 +58,7 @@ D. Machado, S. Andrejev, M. Tramontano, et K. R. Patil, « Fast automated recons
 ### EXAMPLE OF USE ###
 
 command line : 
+
 		python3 -W ignore microphona.py parameters.txt
 
 ---> See toy_example directory to see the results
